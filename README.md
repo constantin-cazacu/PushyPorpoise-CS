@@ -1,5 +1,5 @@
 # PushyPorpoise-CS
-Repository for laboratory assignments at the Cryptgraphy & Security course
+Repository for laboratory assignments at the Cryptography & Security course
 
 ### Description
 During the course there is a sequence of labs, the end goal of which is to develop a Security
