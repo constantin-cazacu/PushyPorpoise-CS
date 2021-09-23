@@ -1,5 +1,5 @@
 # PushyPorpoise-CS
-Repository for laboratory assignments at the Cryptography & Security course
+Repository for laboratory assignments at the Cryptography & Security course</br>
 Language: Python
 
 ### Description
