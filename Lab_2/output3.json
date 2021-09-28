@@ -1,0 +1,21 @@
+<custom_item>
+	custom_item_number : 9
+</custom_item>
+	type : LOCKOUT_POLICY
+</custom_item>
+	description : "1.2.2 Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
+</custom_item>
+	value_type : POLICY_DWORD
+</custom_item>
+	value_data : [1..10]
+</custom_item>
+	lockout_policy : LOCKOUT_THRESHOLD
+</custom_item>
+	file : type: LOCKOUT_POLICY
+</custom_item>
+	info : "This policy setting determines the number of failed logon attempts before the account is locked. Setting this policy to 0 does not conform to the benchmark as doing so disables the account lockout threshold.
+</custom_item>
+	service : type: LOCKOUT_POLICY
+</custom_item>
+	see_also : "https://workbench.cisecurity.org/files/2646"
+</custom_item>

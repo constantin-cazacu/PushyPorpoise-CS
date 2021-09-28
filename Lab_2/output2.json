@@ -1,0 +1,19 @@
+<custom_item>
+	custom_item_number : 12
+</custom_item>
+	type : USER_RIGHTS_POLICY
+</custom_item>
+	description : "2.2.2 Ensure 'Access this computer from the network' is set to 'Administrators, Remote Desktop Users'"
+</custom_item>
+	value_type : USER_RIGHT
+</custom_item>
+	value_data : "Administrators" && "Remote Desktop Users"
+</custom_item>
+	file : type: USER_RIGHTS_POLICY
+</custom_item>
+	right_type : SeNetworkLogonRight
+</custom_item>
+	info : "This policy setting allows other users on the network to connect to the computer and is required by various network protocols that include Server Message Block (SMB)-based protocols, NetBIOS, Common Internet File System (CIFS), and Component Object Model Plus (COM+).
+</custom_item>
+	see_also : "https://workbench.cisecurity.org/files/2646"
+</custom_item>
