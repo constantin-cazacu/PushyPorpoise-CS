@@ -1,0 +1,54 @@
+[
+    {
+        "custom_item_number": 57,
+        "type": "REGISTRY_SETTING",
+        "description": "\"2.3.6.1 Ensure 'Domain member: Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "\"1\"",
+        "file": "type: REGISTRY_SETTING",
+        "reg_key": "\"HKLM\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters\"",
+        "reg_item": "\"RequireSignOrSeal\"",
+        "info": "\"This policy setting determines whether all secure channel traffic that is initiated by the domain member must be signed or encrypted.",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "see_also": "\"https://workbench.cisecurity.org/files/2646\""
+    },
+    {
+        "custom_item_number": 58,
+        "type": "REGISTRY_SETTING",
+        "description": "\"2.3.6.2 Ensure 'Domain member: Digitally encrypt secure channel data (when possible)' is set to 'Enabled'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "\"1\"",
+        "file": "type: REGISTRY_SETTING",
+        "reg_key": "\"HKLM\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters\"",
+        "reg_item": "\"SealSecureChannel\"",
+        "info": "\"This policy setting determines whether a domain member should attempt to negotiate encryption for all secure channel traffic that it initiates.",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "see_also": "\"https://workbench.cisecurity.org/files/2646\""
+    },
+    {
+        "custom_item_number": 59,
+        "type": "REGISTRY_SETTING",
+        "description": "\"2.3.6.3 Ensure 'Domain member: Digitally sign secure channel data (when possible)' is set to 'Enabled'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "\"1\"",
+        "file": "type: REGISTRY_SETTING",
+        "reg_key": "\"HKLM\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters\"",
+        "reg_item": "\"SignSecureChannel\"",
+        "info": "\"This policy setting determines whether a domain member should attempt to negotiate whether all secure channel traffic that it initiates must be digitally signed. Digital signatures protect the traffic from being modified by anyone who captures the data as it traverses the network.",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "see_also": "\"https://workbench.cisecurity.org/files/2646\""
+    },
+    {
+        "custom_item_number": 60,
+        "type": "REGISTRY_SETTING",
+        "description": "\"2.3.6.4 Ensure 'Domain member: Disable machine account password changes' is set to 'Disabled'\"",
+        "value_type": "POLICY_DWORD",
+        "value_data": "\"0\"",
+        "file": "type: REGISTRY_SETTING",
+        "reg_key": "\"HKLM\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters\"",
+        "reg_item": "\"DisablePasswordChange\"",
+        "info": "\"This policy setting determines whether a domain member can periodically change its computer account password. Computers that cannot automatically change their account passwords are potentially vulnerable, because an attacker might be able to determine the password for the system's domain account.",
+        "reg_option": "CAN_NOT_BE_NULL",
+        "see_also": "\"https://workbench.cisecurity.org/files/2646\""
+    }
+]
