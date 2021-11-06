@@ -1,7 +1,7 @@
 import json
+import os
 from tkinter import *
 from tkinter import filedialog
-from run_audit import check_audit
 
 root = Tk()
 root.title('Lab Work No. 3 - Constantin Cazacu')
@@ -446,6 +446,25 @@ def run_audit():
     text_file = 'audit_result.txt'
     text_file = open(text_file, 'r')
     my_text.insert(END, text_file.read())
+
+
+def check_audit():
+    file = open('output.json',)
+    audit = json.load(file)
+
+    with open('audit_result.txt', 'w') as to_save:
+        for custom_item in audit:
+            cmd = 'reg query ' + custom_item['reg_key'][1:-1] + ' /v ' + custom_item['reg_item'][1:-1]
+            output = os.popen(cmd).read()
+            pattern = custom_item['value_data'][1:-1]
+            is_present = re.search(pattern, output)
+            to_save.write(custom_item['description'][1:-1] + '\t\t\t\t\t\t')
+            if is_present:
+                to_save.write('Valid' + '\n\n')
+            else:
+                to_save.write('Invalid' + '\n')
+                to_save.write('Expected: ' + custom_item['value_data'][1:-1] + '\n')
+                to_save.write('Found: ' + output + '\n\n')
 
 
 def export():
